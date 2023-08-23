@@ -1,7 +1,6 @@
 import { pool } from "../db.js";
 
 export const getEmployees = async (req, res) => {
-  throw new Error("DB ERROR");
   const [row] = await pool.query(`SELECT * FROM EMPLOYEE_DB`);
   res.send(row);
 };
